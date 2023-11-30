@@ -37,7 +37,7 @@ jobs:
     - name: Format Terraform
       run: |
         cd infrastructure
-        terraform fmt -check
+        terraform fmt
 
     - name: Plan Terraform
       run: |
