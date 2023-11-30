@@ -6,6 +6,12 @@ terraform {
     }
   }
 
+  backend "s3" {
+    bucket = "command-show-website"
+    key    = "tfstate/"
+    region = "eu-south-2"
+  }
+
   required_version = ">= 1.2.0"
 }
 
