@@ -1,3 +1,7 @@
+resource "aws_cloudfront_origin_access_identity" "oai" {
+  comment = "OAI for command-show-website"
+}
+
 resource "aws_cloudfront_distribution" "s3_distribution" {
     origin {
         domain_name = aws_s3_bucket.command-show-website.bucket_regional_domain_name
