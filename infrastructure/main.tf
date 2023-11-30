@@ -7,8 +7,8 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "command-show-website"
-    key    = "tfstate"
+    bucket = "alvarogarciapiz-tfstates"
+    key    = "command-show-website"
     region = "eu-south-2"
   }
 
