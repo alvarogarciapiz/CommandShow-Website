@@ -33,14 +33,18 @@ jobs:
       run: terraform fmt -check
 
     - name: Plan Terraform
-      run: terraform plan
+      run: |
+        pwd
+        cd infrastructure
+        terraform plan
 
     - name: Apply Terraform
       run: terraform apply -auto-approve
 
     - name: Build React app
       run: |
-        cd react-app
+        pwd
+        cd CommandShow-Website
         npm install
         npm run build:vite
 
