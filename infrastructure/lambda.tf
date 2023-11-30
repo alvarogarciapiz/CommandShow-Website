@@ -2,7 +2,7 @@ resource "aws_lambda_function" "get_podcast_episodes" {
     filename      = "lambda.zip"
     function_name = "get_podcast_episodes"
     role          = aws_iam_role.lambda_exec.arn
-    handler       = "lambda_function.lambda_handler"
+    handler       = "lambda.lambda_handler"
 
     source_code_hash = filebase64sha256("lambda.zip")
 
