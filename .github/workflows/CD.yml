@@ -54,8 +54,8 @@ jobs:
         pwd
         ls -la
         npm install
-        npm run build:vite
+        npm run build
 
     - name: Deploy React app to S3
       run: |
-        aws s3 sync build/ s3://my-react-app
+        aws s3 sync build/ s3://command-show-website
