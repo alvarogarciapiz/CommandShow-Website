@@ -18,3 +18,21 @@ resource "aws_s3_bucket_website_configuration" "example" {
     key = "error.html"
   }
 }
+
+
+resource "aws_s3_bucket_policy" "public_read" {
+  bucket = aws_s3_bucket.command-show-website.id
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Sid       = "PublicReadGetObject"
+        Effect    = "Allow"
+        Principal = "*"
+        Action    = ["s3:GetObject"]
+        Resource  = ["arn:aws:s3:::${aws_s3_bucket.command-show-website.id}/*"]
+      },
+    ]
+  })
+}
