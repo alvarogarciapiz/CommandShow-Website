@@ -39,7 +39,7 @@ resource "aws_iam_role_policy" "lambda_exec" {
                     "s3:GetObject"
                 ]
                 Resource = [
-                    aws_s3_bucket.react_app.arn
+                    aws_s3_bucket.command-show-website.arn
                 ]
                 Effect = "Allow"
             },
