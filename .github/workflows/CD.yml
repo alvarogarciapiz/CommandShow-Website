@@ -35,7 +35,6 @@ jobs:
 
     - name: Plan Terraform
       run: |
-        pwd
         cd infrastructure
         terraform plan
 
@@ -45,7 +44,8 @@ jobs:
     - name: Build React app
       run: |
         pwd
-        cd CommandShow-Website
+        cd ..
+        ls -la
         npm install
         npm run build:vite
 

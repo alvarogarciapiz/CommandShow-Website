@@ -43,12 +43,3 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
         cloudfront_default_certificate = true
     }
 }
-
-resource "aws_s3_bucket" "command-show-website" {
-    bucket = "command-show-website"
-
-    tags = {
-        Name        = "command-show-website"
-        Environment = "production"
-    }
-}
