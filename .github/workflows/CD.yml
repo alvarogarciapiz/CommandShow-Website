@@ -3,7 +3,8 @@ name: Deploy Infrastructure and App
 on:
   push:
     branches:
-      - main
+      - master
+  workflow_dispatch:
 
 jobs:
   deploy:
