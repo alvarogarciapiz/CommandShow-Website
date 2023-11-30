@@ -51,13 +51,9 @@ jobs:
 
     - name: Build React app
       run: |
-        pwd
-        ls -la
         npm install
         npm run build
 
     - name: Deploy React app to S3
       run: |
-        pwd
-        ls -la
         aws s3 sync ./build/ s3://command-show-website
