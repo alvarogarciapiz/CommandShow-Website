@@ -1,4 +1,4 @@
-name: Deploy Infrastructure and App
+name: "Deploy Infrastructure and App"
 
 on:
   push:
@@ -30,21 +30,28 @@ jobs:
         terraform init
 
     - name: Validate Terraform
-      run: terraform validate
+      run: |
+        cd infrastructure
+        terraform validate
 
     - name: Format Terraform
-      run: terraform fmt -check
+      run: |
+        cd infrastructure
+        terraform fmt -check
 
     - name: Plan Terraform
-      run: terraform plan
+      run: |
+        cd infrastructure
+        terraform plan
 
     - name: Apply Terraform
-      run: terraform apply -auto-approve
+      run: |
+        cd infrastructure
+        terraform apply -auto-approve
 
     - name: Build React app
       run: |
         pwd
-        cd ..
         ls -la
         npm install
         npm run build:vite
