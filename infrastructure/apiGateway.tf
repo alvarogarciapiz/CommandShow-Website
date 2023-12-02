@@ -23,13 +23,13 @@ resource "aws_api_gateway_integration" "integration" {
 
     integration_http_method = "POST"
     type                    = "AWS_PROXY"
-    uri                     = aws_lambda_function.get_podcast_episodes.invoke_arn  # Cambiado a get_podcast_episodes
+    uri                     = aws_lambda_function.get_podcast_episodes.invoke_arn
 }
 
 resource "aws_lambda_permission" "permission" {
     statement_id  = "AllowAPIGatewayInvoke"
     action        = "lambda:InvokeFunction"
-    function_name = aws_lambda_function.get_podcast_episodes.function_name  # Cambiado a get_podcast_episodes
+    function_name = aws_lambda_function.get_podcast_episodes.function_name
     principal     = "apigateway.amazonaws.com"
 
     source_arn = "${aws_api_gateway_rest_api.api.execution_arn}/*/${aws_api_gateway_method.method.http_method}${aws_api_gateway_resource.resource.path}"
