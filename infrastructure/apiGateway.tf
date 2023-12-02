@@ -1,36 +1,36 @@
 resource "aws_api_gateway_rest_api" "api" {
-  name        = "my-api"
-  description = "My API"
+    name        = "my-api"
+    description = "My API"
 }
 
 resource "aws_api_gateway_resource" "resource" {
-  rest_api_id = aws_api_gateway_rest_api.api.id
-  parent_id   = aws_api_gateway_rest_api.api.root_resource_id
-  path_part   = "episodes"
+    rest_api_id = aws_api_gateway_rest_api.api.id
+    parent_id   = aws_api_gateway_rest_api.api.root_resource_id
+    path_part   = "episodes"
 }
 
 resource "aws_api_gateway_method" "method" {
-  rest_api_id   = aws_api_gateway_rest_api.api.id
-  resource_id   = aws_api_gateway_resource.resource.id
-  http_method   = "GET"
-  authorization = "NONE"
+    rest_api_id   = aws_api_gateway_rest_api.api.id
+    resource_id   = aws_api_gateway_resource.resource.id
+    http_method   = "GET"
+    authorization = "NONE"
 }
 
 resource "aws_api_gateway_integration" "integration" {
-  rest_api_id = aws_api_gateway_rest_api.api.id
-  resource_id = aws_api_gateway_resource.resource.id
-  http_method = aws_api_gateway_method.method.http_method
+    rest_api_id = aws_api_gateway_rest_api.api.id
+    resource_id = aws_api_gateway_resource.resource.id
+    http_method = aws_api_gateway_method.method.http_method
 
-  integration_http_method = "POST"
-  type                    = "AWS_PROXY"
-  uri                     = aws_lambda_function.my_lambda.invoke_arn
+    integration_http_method = "POST"
+    type                    = "AWS_PROXY"
+    uri                     = aws_lambda_function.get_podcast_episodes.invoke_arn 
 }
 
 resource "aws_lambda_permission" "permission" {
-  statement_id  = "AllowAPIGatewayInvoke"
-  action        = "lambda:InvokeFunction"
-  function_name = aws_lambda_function.my_lambda.function_name
-  principal     = "apigateway.amazonaws.com"
+    statement_id  = "AllowAPIGatewayInvoke"
+    action        = "lambda:InvokeFunction"
+    function_name = aws_lambda_function.get_podcast_episodes.function_name  
+    principal     = "apigateway.amazonaws.com"
 
-  source_arn = "${aws_api_gateway_rest_api.api.execution_arn}/*/${aws_api_gateway_method.method.http_method}${aws_api_gateway_resource.resource.path}"
+    source_arn = "${aws_api_gateway_rest_api.api.execution_arn}/*/${aws_api_gateway_method.method.http_method}${aws_api_gateway_resource.resource.path}"
 }
