@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://lfzj8j2pm8.execute-api.eu-south-2.amazonaws.com/episodes');
+        const response = await axios.get('https://lfzj8j2pm8.execute-api.eu-south-2.amazonaws.com/production/episodes');
         setEpisodes(response.data);
       } catch (error) {
         console.error('Hubo un error al obtener los episodios:', error);
