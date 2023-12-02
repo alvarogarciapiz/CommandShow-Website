@@ -42,8 +42,11 @@ resource "aws_api_gateway_method_response" "response_200" {
     status_code = "200"
 
     response_parameters = {
-        "method.response.header.Access-Control-Allow-Origin" = true
-    }
+    "method.response.header.Access-Control-Allow-Headers"     = true,
+    "method.response.header.Access-Control-Allow-Methods"     = true,
+    "method.response.header.Access-Control-Allow-Origin"      = true,
+    "method.response.header.Access-Control-Allow-Credentials" = true
+  }
 
     response_models = {
         "application/json" = "Empty"
@@ -57,8 +60,11 @@ resource "aws_api_gateway_integration_response" "integration_response_200" {
     status_code = aws_api_gateway_method_response.response_200.status_code
 
     response_parameters = {
-    "method.response.header.Access-Control-Allow-Origin" = "'https://command-show-website.s3.eu-south-2.amazonaws.com'"
-}
+    "method.response.header.Access-Control-Allow-Headers"     = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'",
+    "method.response.header.Access-Control-Allow-Methods"     = "'GET,OPTIONS,POST,PUT'",
+    "method.response.header.Access-Control-Allow-Origin"      = "'https://command-show-website.s3.eu-south-2.amazonaws.com'",
+    "method.response.header.Access-Control-Allow-Credentials" = "'true'"
+  }
 
     response_templates = {
         "application/json" = ""
@@ -82,10 +88,11 @@ resource "aws_api_gateway_method_response" "options_200" {
     "application/json" = "Empty"
     }
     response_parameters = {
-    "method.response.header.Access-Control-Allow-Headers" = true
-    "method.response.header.Access-Control-Allow-Methods" = true
-    "method.response.header.Access-Control-Allow-Origin"  = true
-    }
+    "method.response.header.Access-Control-Allow-Headers"     = true,
+    "method.response.header.Access-Control-Allow-Methods"     = true,
+    "method.response.header.Access-Control-Allow-Origin"      = true,
+    "method.response.header.Access-Control-Allow-Credentials" = true
+  }
 }
 
 resource "aws_api_gateway_integration" "options" {
@@ -103,10 +110,11 @@ resource "aws_api_gateway_integration_response" "options_200" {
     http_method = aws_api_gateway_method.options.http_method
     status_code = aws_api_gateway_method_response.options_200.status_code
     response_parameters = {
-    "method.response.header.Access-Control-Allow-Headers" = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
-    "method.response.header.Access-Control-Allow-Methods" = "'POST,OPTIONS'"
-    "method.response.header.Access-Control-Allow-Origin"  = "'https://command-show-website.s3.eu-south-2.amazonaws.com'"
-    }
+    "method.response.header.Access-Control-Allow-Headers"     = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'",
+    "method.response.header.Access-Control-Allow-Methods"     = "'GET,OPTIONS,POST,PUT'",
+    "method.response.header.Access-Control-Allow-Origin"      = "'https://command-show-website.s3.eu-south-2.amazonaws.com'",
+    "method.response.header.Access-Control-Allow-Credentials" = "'true'"
+  }
 
     response_templates = {
         "application/json" = ""
