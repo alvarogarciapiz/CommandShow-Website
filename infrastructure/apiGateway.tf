@@ -23,7 +23,7 @@ resource "aws_api_gateway_integration" "integration" {
 
     integration_http_method = "POST"
     type                    = "AWS_PROXY"
-    uri                     = aws_lambda_function.get_podcast_episodes.invoke_arn_suffix
+    uri = aws_lambda_function.get_podcast_episodes.arn
 }
 
 resource "aws_lambda_permission" "permission" {
