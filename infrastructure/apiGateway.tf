@@ -127,5 +127,4 @@ module "cors" {
 
   api_id            = aws_api_gateway_rest_api.api.id
   api_resource_id   = aws_api_gateway_resource.resource.id
-  allow_credentials = true
 }
