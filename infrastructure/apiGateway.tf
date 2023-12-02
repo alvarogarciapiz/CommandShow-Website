@@ -79,7 +79,7 @@ resource "aws_api_gateway_method_response" "options_200" {
     status_code = "200"
 
     response_parameters = {
-        "method.response.header.Access-Control-Allow-Origin" = true
+        "method.response.header.Access-Control-Allow-Origin" = "'https://command-show-website.s3.eu-south-2.amazonaws.com'"
     }
 }
 
