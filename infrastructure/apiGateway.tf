@@ -57,7 +57,7 @@ resource "aws_api_gateway_integration_response" "integration_response_200" {
     status_code = aws_api_gateway_method_response.response_200.status_code
 
     response_parameters = {
-    "method.response.header.Access-Control-Allow-Origin" = "'*'"
+    "method.response.header.Access-Control-Allow-Origin" = "'https://command-show-website.s3.eu-south-2.amazonaws.com'"
 }
 
     response_templates = {
