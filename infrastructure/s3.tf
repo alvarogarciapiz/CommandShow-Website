@@ -45,10 +45,10 @@ resource "aws_s3_bucket_policy" "public_read" {
   })
 }
 
-resource "aws_s3_bucket_cors" "cors" {
+resource "aws_s3_bucket_cors_configuration" "cors" {
   bucket = aws_s3_bucket.command-show-website.bucket
 
-  rule {
+  cors_rule {
     allowed_headers = ["*"]
     allowed_methods = ["PUT", "POST"]
     allowed_origins = ["https://s3-website-test.hashicorp.com"]
@@ -56,7 +56,7 @@ resource "aws_s3_bucket_cors" "cors" {
     max_age_seconds = 3000
   }
 
-  rule {
+  cors_rule {
     allowed_methods = ["GET"]
     allowed_origins = ["*"]
   }
