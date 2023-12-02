@@ -41,8 +41,12 @@ resource "aws_api_gateway_method_response" "response_200" {
     http_method = aws_api_gateway_method.method.http_method
     status_code = "200"
 
+    response_parameters = {
+        "method.response.header.Access-Control-Allow-Origin" = true
+    }
+
     response_models = {
-    "application/json" = "Empty"
+        "application/json" = "Empty"
     }
 }
 
@@ -52,23 +56,11 @@ resource "aws_api_gateway_integration_response" "integration_response_200" {
     http_method = aws_api_gateway_method.method.http_method
     status_code = aws_api_gateway_method_response.response_200.status_code
 
-    response_templates = {
-    "application/json" = ""
+    response_parameters = {
+        "method.response.header.Access-Control-Allow-Origin" = "'https://command-show-website.s3.eu-south-2.amazonaws.com'"
     }
-}
 
-resource "aws_api_gateway_cors" "cors" {
-    rest_api_id = aws_api_gateway_rest_api.api.id
-
-    allow_origins = [
-    "https://command-show-website.s3.eu-south-2.amazonaws.com",
-    ]
-
-    allow_methods = [
-    "GET",
-    ]
-
-    allow_headers = [
-    "Authorization",
-    ]
+    response_templates = {
+        "application/json" = ""
+    }
 }
