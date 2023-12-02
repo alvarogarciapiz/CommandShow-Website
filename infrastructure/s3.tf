@@ -58,6 +58,6 @@ resource "aws_s3_bucket_cors_configuration" "cors" {
 
   cors_rule {
     allowed_methods = ["GET"]
-    allowed_origins = ["*"]
+    allowed_origins = ["'https://command-show-website.s3.eu-south-2.amazonaws.com'"]
   }
 }
