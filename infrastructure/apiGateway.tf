@@ -1,6 +1,6 @@
 resource "aws_api_gateway_rest_api" "api" {
-  name        = "my-api"
-  description = "My API"
+    name        = "my-api"
+    description = "My API"
 }
 
 resource "aws_api_gateway_resource" "resource" {
