@@ -57,10 +57,10 @@ resource "aws_api_gateway_integration_response" "integration_response" {
 resource "aws_lambda_permission" "permission" {
     statement_id  = "AllowAPIGatewayInvoke"
     action        = "lambda:InvokeFunction"
-    function_name = aws_lambda_function.get_podcast_episodes.function_name  
+    function_name = aws_lambda_function.get_podcast_episodes.function_name
     principal     = "apigateway.amazonaws.com"
 
-    source_arn = "${aws_api_gateway_rest_api.api.execution_arn}/*/GET/resource/episodes"
+    source_arn = "${aws_api_gateway_rest_api.api.execution_arn}/*/GET/episodes"
 }
 
 resource "aws_api_gateway_deployment" "deployment" {
