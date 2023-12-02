@@ -70,6 +70,7 @@ resource "aws_api_gateway_method" "options" {
     resource_id   = aws_api_gateway_resource.resource.id
     http_method   = "OPTIONS"
     authorization = "NONE"
+    api_key_required = false
 }
 
 resource "aws_api_gateway_method_response" "options_200" {
@@ -77,9 +78,13 @@ resource "aws_api_gateway_method_response" "options_200" {
     resource_id = aws_api_gateway_resource.resource.id
     http_method = aws_api_gateway_method.options.http_method
     status_code = "200"
-
+    response_models = {
+    "application/json" = "Empty"
+    }
     response_parameters = {
-        "method.response.header.Access-Control-Allow-Origin" = true
+    "method.response.header.Access-Control-Allow-Headers" = true
+    "method.response.header.Access-Control-Allow-Methods" = true
+    "method.response.header.Access-Control-Allow-Origin"  = true
     }
 }
 
@@ -87,7 +92,7 @@ resource "aws_api_gateway_integration" "options" {
     rest_api_id = aws_api_gateway_rest_api.api.id
     resource_id = aws_api_gateway_resource.resource.id
     http_method = aws_api_gateway_method.options.http_method
-
+    passthrough_behavior = "WHEN_NO_MATCH"
     type                    = "MOCK"
     request_templates       = { "application/json" = "{\"statusCode\": 200}" }
 }
@@ -97,9 +102,10 @@ resource "aws_api_gateway_integration_response" "options_200" {
     resource_id = aws_api_gateway_resource.resource.id
     http_method = aws_api_gateway_method.options.http_method
     status_code = aws_api_gateway_method_response.options_200.status_code
-
     response_parameters = {
-        "method.response.header.Access-Control-Allow-Origin" = "'https://command-show-website.s3.eu-south-2.amazonaws.com'"
+    "method.response.header.Access-Control-Allow-Headers" = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
+    "method.response.header.Access-Control-Allow-Methods" = "'POST,OPTIONS'"
+    "method.response.header.Access-Control-Allow-Origin"  = "'https://command-show-website.s3.eu-south-2.amazonaws.com'"
     }
 
     response_templates = {
