@@ -60,7 +60,7 @@ resource "aws_lambda_permission" "permission" {
     function_name = aws_lambda_function.get_podcast_episodes.function_name  
     principal     = "apigateway.amazonaws.com"
 
-    source_arn = "${aws_api_gateway_rest_api.api.execution_arn}/*/${aws_api_gateway_method.method.http_method}${aws_api_gateway_resource.resource.path}"
+    source_arn = "${aws_api_gateway_rest_api.api.execution_arn}/*/GET/resource/episodes"
 }
 
 resource "aws_api_gateway_deployment" "deployment" {
