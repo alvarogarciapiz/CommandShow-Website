@@ -67,14 +67,7 @@ resource "aws_api_gateway_integration_response" "integration_response_200" {
     "method.response.header.Access-Control-Allow-Credentials" = "'true'"
   }
 
-    response_templates = {
-    "application/json" = <<EOF
-{
-  "statusCode": 200,
-  "message": "OK! Everything in order"
-}
-EOF
-  }
+    response_templates = { "application/json" = "{\"statusCode\": 200}" }
 }
 
 # resource "aws_api_gateway_method_response" "options_200" {
