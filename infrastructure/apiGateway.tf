@@ -64,3 +64,45 @@ resource "aws_api_gateway_integration_response" "integration_response_200" {
         "application/json" = ""
     }
 }
+
+resource "aws_api_gateway_method" "options" {
+    rest_api_id   = aws_api_gateway_rest_api.api.id
+    resource_id   = aws_api_gateway_resource.resource.id
+    http_method   = "OPTIONS"
+    authorization = "NONE"
+}
+
+resource "aws_api_gateway_method_response" "options_200" {
+    rest_api_id = aws_api_gateway_rest_api.api.id
+    resource_id = aws_api_gateway_resource.resource.id
+    http_method = aws_api_gateway_method.options.http_method
+    status_code = "200"
+
+    response_parameters = {
+        "method.response.header.Access-Control-Allow-Origin" = true
+    }
+}
+
+resource "aws_api_gateway_integration" "options" {
+    rest_api_id = aws_api_gateway_rest_api.api.id
+    resource_id = aws_api_gateway_resource.resource.id
+    http_method = aws_api_gateway_method.options.http_method
+
+    type                    = "MOCK"
+    request_templates       = { "application/json" = "{\"statusCode\": 200}" }
+}
+
+resource "aws_api_gateway_integration_response" "options_200" {
+    rest_api_id = aws_api_gateway_rest_api.api.id
+    resource_id = aws_api_gateway_resource.resource.id
+    http_method = aws_api_gateway_method.options.http_method
+    status_code = aws_api_gateway_method_response.options_200.status_code
+
+    response_parameters = {
+        "method.response.header.Access-Control-Allow-Origin" = "'https://command-show-website.s3.eu-south-2.amazonaws.com'"
+    }
+
+    response_templates = {
+        "application/json" = ""
+    }
+}
