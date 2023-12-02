@@ -65,7 +65,7 @@ resource "aws_lambda_permission" "permission" {
 
 resource "aws_api_gateway_deployment" "deployment" {
     rest_api_id = aws_api_gateway_rest_api.api.id
-    stage_name  = "test"
+    stage_name  = "production"
 
     depends_on = [
         aws_api_gateway_method_response.response_200,
