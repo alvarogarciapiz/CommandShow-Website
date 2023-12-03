@@ -47,6 +47,12 @@ function App() {
                 Spotify
               </button>
             </a>
+            <a href="https://open.spotify.com/show/2RgfLLM8bsFjHHhlkyEOJW?si=af1e628d90ca4f59" target="_blank" rel="noopener noreferrer">
+              <button>
+                <img src={amazonIcon} alt="Amazon Icon" />
+                Amazon Music
+              </button>
+            </a>
           </div>
         </div>
       </div>
