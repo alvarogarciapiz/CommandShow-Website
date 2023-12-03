@@ -90,7 +90,7 @@ h3{
   }
 
   #root {
-    margin-top: 10vh;
+    margin-top: 100px;
     margin-left: 5vw;
     margin-right: 5vw;
   }
@@ -117,7 +117,7 @@ h3{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 15vh;
+  margin-top: 150px;
 }
 
 .content-container {
@@ -131,12 +131,17 @@ h3{
 }
 
 .episode-card {
-  background-color: #f5f5f5;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 20px;
+  background-color: #f5f5f59b;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 25px;
   width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.enlaceEpisodio {
+  text-decoration: none;
+  color: rgb(94, 106, 249)
 }
 
 @media (prefers-color-scheme: dark) {
