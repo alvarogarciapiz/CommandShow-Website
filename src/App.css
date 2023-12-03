@@ -149,15 +149,11 @@ h3{
 
   #root {
     margin-top: 100px;
-    margin-left: 5vw;
-    margin-right: 5vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
   }
 
   .image-container img {
     max-width: 300px;
-  }
-
-  .main-container {
-    margin-top: 300px;
   }
 }
