@@ -52,7 +52,7 @@ function App() {
       </div>
       <div className="episodes-container">
         {episodes.map((episode, index) => (
-          <div key={index}>
+          <div key={index} className="episode-card">
             <h2>{episode.title}</h2>
             <p>{episode.published}</p>
             <a href={episode.link}>Escuchar episodio</a>
