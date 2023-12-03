@@ -33,8 +33,9 @@ h3{
 }
 
 .image-container img {
-  max-width: 300px;
+  max-width: 360px;
   height: auto;
+  border-radius: 16px;
 }
 
 .content-container {
