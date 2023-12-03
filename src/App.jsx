@@ -60,7 +60,6 @@ function App() {
         {episodes.map((episode, index) => (
           <div key={index} className="episode-card">
             <h2>{episode.title}</h2>
-            <p>{episode.published}</p>
             <a href={episode.link} className="enlaceEpisodio">Escuchar episodio</a>
           </div>
         ))}
