@@ -102,10 +102,18 @@ h3{
   height: 22px;
 }
 
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-container {
+  text-align: center;
+}
+
 .episodes-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra los elementos en el eje transversal */
-  justify-content: center; /* Centra los elementos en el eje principal */
-  width: 100%; /* Ocupa todo el ancho disponible */
+  align-items: center;
 }
