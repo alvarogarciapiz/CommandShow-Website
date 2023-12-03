@@ -1,8 +1,7 @@
 html, body {
   font-family: 'Poppins', sans-serif;
-  height: 100%;
   margin: 0;
-  background: linear-gradient(337deg,#4a4a4a,#949494,#b5b5b5,#696969);
+  background: linear-gradient(337deg,#9cba8f,#d3b4b4,#979dbf,#bec26f);
   background-size: 420% 420%;
   animation: body 8s ease infinite;
 }
