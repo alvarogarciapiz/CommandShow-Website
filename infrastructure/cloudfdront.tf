@@ -6,7 +6,7 @@ provider "aws" {
   region = "us-east-1"
 }
 data "aws_acm_certificate" "cert" {
-  domain   = "*.lvrpiz.com"
+  domain   = "lvrpiz.com"
   statuses = ["ISSUED"]
   provider = aws.useast1
 }
