@@ -5,6 +5,7 @@ import caratula from "../src/assets/caratula.jpg";
 import appleIcon from "../src/assets/apple.png";
 import spotifyIcon from "../src/assets/spotify.png";
 import amazonIcon from "../src/assets/amazon.png";
+import ivooxIcon from "../src/assets/ivoox.png";
 
 function App() {
   const [episodes, setEpisodes] = useState([]);
@@ -47,10 +48,10 @@ function App() {
                 Spotify
               </button>
             </a>
-            <a href="https://open.spotify.com/show/2RgfLLM8bsFjHHhlkyEOJW?si=af1e628d90ca4f59" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.ivoox.com/podcast-the-command-show_sq_f12255193_1.html" target="_blank" rel="noopener noreferrer">
               <button>
-                <img src={amazonIcon} alt="Amazon Icon" />
-                Amazon Music
+                <img src={ivooxIcon} alt="iVoox icon" />
+                iVoox
               </button>
             </a>
           </div>
