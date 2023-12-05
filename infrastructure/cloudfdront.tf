@@ -1,11 +1,14 @@
 resource "aws_cloudfront_origin_access_identity" "oai" {
   comment = "OAI for command-show-website"
 }
-
+provider "aws" {
+  alias  = "useast1"
+  region = "us-east-1"
+}
 data "aws_acm_certificate" "cert" {
   domain   = "*.lvrpiz.com"
   statuses = ["ISSUED"]
-  provider = aws.eu-south-2
+  provider = aws.useast1
 }
 
 resource "aws_cloudfront_distribution" "s3_distribution" {
