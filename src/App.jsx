@@ -6,6 +6,7 @@ import appleIcon from "../src/assets/apple.png";
 import spotifyIcon from "../src/assets/spotify.png";
 import amazonIcon from "../src/assets/amazon.png";
 import ivooxIcon from "../src/assets/ivoox.png";
+import xIcon from "../src/assets/x.png";
 
 function App() {
   const [episodes, setEpisodes] = useState([]);
@@ -40,6 +41,16 @@ function App() {
           </h2>
           <h3>Suscríbete en tu plataforma favorita</h3>
           <div className="buttons-container">
+          <a
+              href="https://twitter.com/ghostcoreapple"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button>
+                <img src={xIcon} alt="X app Icon" />
+                Follow on X
+              </button>
+            </a>
             <a
               href="https://podcasts.apple.com/es/podcast/the-command-show/id1705378048"
               target="_blank"
