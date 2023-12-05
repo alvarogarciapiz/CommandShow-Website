@@ -1,15 +1,12 @@
 resource "aws_cloudfront_origin_access_identity" "oai" {
   comment = "OAI for command-show-website"
 }
-provider "aws" {
-  alias  = "useast1"
-  region = "us-east-1"
-}
-data "aws_acm_certificate" "cert" {
-  domain   = "*.lvrpiz.com"
-  statuses = ["ISSUED"]
-  provider = aws.useast1
-}
+
+# data "aws_acm_certificate" "cert" {
+#   domain   = "*.lvrpiz.com"
+#   statuses = ["ISSUED"]
+#   provider = aws.eu-south-2
+# }
 
 resource "aws_cloudfront_distribution" "s3_distribution" {
   origin {
@@ -56,8 +53,6 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   }
 
   viewer_certificate {
-    acm_certificate_arn      = data.aws_acm_certificate.cert.arn
-    ssl_support_method       = "sni-only"
-    minimum_protocol_version = "TLSv1.2_2018"
+    cloudfront_default_certificate = true
   }
 }
