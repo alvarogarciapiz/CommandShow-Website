@@ -7,6 +7,8 @@ import spotifyIcon from "../src/assets/spotify.png";
 import amazonIcon from "../src/assets/amazon.png";
 import ivooxIcon from "../src/assets/ivoox.png";
 import xIcon from "../src/assets/x.png";
+import mailIcon from "../src/assets/mail.png";
+import telegramIcon from "../src/assets/telegram.png";
 
 function App() {
   const [episodes, setEpisodes] = useState([]);
@@ -35,10 +37,33 @@ function App() {
         <div className="content-container">
           <h1>The Command Show Podcast</h1>
           <h2>
-            Explora el futuro digital con The Command Show, donde <a href="https://twitter.com/lvrpiz" target="_blank" rel="noopener noreferrer">Álvaro García </a>
-            y <a href="https://twitter.com/samuclr91" target="_blank" rel="noopener noreferrer">Samuel Rodríguez</a> te sumergen en la vanguardia de la tecnología, la
+            Explora el futuro digital con The Command Show 🎙️, donde <a href="https://twitter.com/lvrpiz" target="_blank" rel="noopener noreferrer">Álvaro García </a>
+            y <a href="https://twitter.com/samuclr91" target="_blank" rel="noopener noreferrer">Samuel Rodríguez</a> te sumergen en la vanguardia de Apple, tecnología, la
             innovación y las últimas tendencias digitales.
           </h2>
+          <h3>Únete a la comunidad 👇🏼</h3>
+          <div className="buttons-container">
+          <a
+              href="https://t.me/ghostcoreapple"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button>
+                <img src={telegramIcon} alt="Telegram app Icon" />
+                Únete a nuestra Comunidad
+              </button>
+            </a>
+            <a
+              href="https://command.beehiiv.com/subscribe"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button>
+                <img src={mailIcon} alt="Newsletter Icon" />
+                Newsletter (Coming soon...)
+              </button>
+            </a>
+          </div>
           <h3>Suscríbete en tu plataforma favorita</h3>
           <div className="buttons-container">
           <a
@@ -84,6 +109,7 @@ function App() {
           </div>
         </div>
       </div>
+      <h3 className="tituloEpisodios">Últimos episodios</h3>
       <div className="episodes-container">
         {episodes.map((episode, index) => (
           <div key={index} className="episode-card">

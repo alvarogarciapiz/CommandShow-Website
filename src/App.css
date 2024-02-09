@@ -181,3 +181,9 @@ h3{
   margin-left: 5px;
   margin-right: 5px;
 }
+
+.tituloEpisodios {
+  font-size: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 0.1rem;
+}
