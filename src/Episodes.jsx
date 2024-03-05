@@ -13,7 +13,7 @@ const Episodes = () => {
     const [episodes, setEpisodes] = useState([]);
 
     useEffect(() => {
-        axios.get('https://itunes.apple.com/lookup?id=1705378048&country=US&media=podcast&entity=podcastEpisode&limit=5')
+        axios.get("https://lfzj8j2pm8.execute-api.eu-south-2.amazonaws.com/production/episodes")
             .then(response => {
                 const episodesWithoutFirst = response.data.results.slice(1);
                 setEpisodes(episodesWithoutFirst);
