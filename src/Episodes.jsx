@@ -13,7 +13,9 @@ const Episodes = () => {
     const [episodes, setEpisodes] = useState([]);
 
     useEffect(() => {
-        axios.get('https://itunes.apple.com/lookup?id=1705378048&country=US&media=podcast&entity=podcastEpisode&limit=5')
+        const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+        const targetUrl = 'https://itunes.apple.com/lookup?id=1705378048&country=US&media=podcast&entity=podcastEpisode&limit=5';
+        axios.get(proxyUrl + targetUrl)
             .then(response => {
                 const episodesWithoutFirst = response.data.results.slice(1);
                 setEpisodes(episodesWithoutFirst);
