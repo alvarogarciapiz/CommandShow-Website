@@ -25,7 +25,7 @@ const Episodes = () => {
 
     return (
         <div className="episodesWrapper">
-            <h2 className="podcastTitle">The Command Show</h2>
+            <h2 className="podcastTitle">The Command show</h2>
             <p className="podcastDescription">Tecnología, innovación, IA, Apple, iPhone y más
                 En este podcast, Álvaro y Samuel te traen las últimas tendencias tecnológicas más importantes del momento con un foco en Apple.</p>
             <div className="enlacesPodcast">
