@@ -1,10 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import './styles/index.css'
+import Title from './Title.jsx'
+import Episodes from './Episodes.jsx'
+import Newsletter from './Newsletter.jsx'
+import Ghostcoreapple from './Ghostcoreapple.jsx'
+import Footer from './Footer.jsx'
+import Twitter from './Twitter.jsx'
+import SobreNosotros from './SobreNosotros.jsx'
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <Ghostcoreapple />
+    <Title />
+    <Episodes />
+    <Newsletter />
+    <Twitter />
+    <Footer />
   </React.StrictMode>,
 )

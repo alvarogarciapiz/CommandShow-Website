@@ -1,0 +1,17 @@
+footer {
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.lvrpiz {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.jump {
+    margin-top: 1em;
+}

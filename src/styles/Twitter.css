@@ -1,0 +1,53 @@
+.TwitterWrapperB {
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.TwitterTitleB {
+    display: flex;
+    align-items: center;
+    font-size: 3.5em;
+    color: white;
+    margin-top: 0vh;
+    margin-bottom: 0px;
+}
+
+.desktopMedia img {
+    width: 60px;
+}
+
+.enlaceTWW {
+    text-decoration: none;
+    color: rgb(155, 183, 255);
+}
+.TwitterTitleB img {
+    width: 90px;
+}
+
+.TwitterDescriptionB {
+    font-size: 1.5em;
+    color: white;
+    margin-top: 20px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .TwitterWrapperB {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 5vh;
+    }
+
+    .TwitterDescriptionB {
+        font-size: 1.1em;
+        margin-right: 5px;
+    }
+
+    .TwitterTitleB {
+        font-size: 1.8em;
+    }
+
+}

@@ -1,0 +1,99 @@
+.episodeCard {
+    display: flex;
+    align-items: start;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    min-height: 400px;
+    background-color: rgba(30, 31, 36);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.episodeImage {
+    width: 400px;
+    height: 400px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-right: 25px;
+}
+
+.episodeDate {
+    font-size: 1em;
+    color: #b5b5b5;
+}
+
+.episodeTitle {
+    margin-top: 0px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+}
+
+.episodeDescription {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    margin-right: 100px;
+    color: rgb(239, 239, 239);
+}
+
+.enlaces img {
+    width: 30px;
+    height: auto;
+    vertical-align: middle;
+}
+
+.enlaces {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-right: 60px;
+    gap: 25px;
+}
+
+@media (max-width: 1200px) {
+    .episodeCard {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .episodeImage {
+        width: 100%;
+        margin-right: 1px;
+        height: auto;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        align-items: center;
+    }
+
+    .enlaces {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        margin-top: 1px;
+        margin-right: 1px;
+        margin-top: 30px;
+        padding-bottom: 10px;
+    }
+
+    .contentCard {
+        margin-left: 20px;
+        width: 90%;
+        padding-bottom: 15px;
+    }
+    
+    .episodeTitle {
+        margin-top: 0px;
+        margin-bottom: 30px;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    
+    .episodeDescription {
+        margin-bottom: 10px;
+        font-size: 1.2em;
+        margin-right: 10px;
+        width: 90%;
+    }
+}

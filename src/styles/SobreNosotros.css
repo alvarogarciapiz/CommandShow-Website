@@ -1,0 +1,22 @@
+.contenedorSN {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+.smallSN {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tarjetaSN {
+    width: 100%;
+    background-color: aqua;
+    border-radius: 14px;
+}
+
+.tarjetaSN img {
+    width: 20%;
+}

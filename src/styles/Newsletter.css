@@ -1,0 +1,42 @@
+.newsletterWrapperB {
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    margin-top: 10vh;
+}
+
+.newsletterTitleB {
+    font-size: 3.5em;
+    color: white;
+    margin-top: 0vh;
+    display: inline;
+    background: -webkit-linear-gradient(left, #95cbfe, #236ef9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.newsletterDescriptionB {
+    font-size: 1.5em;
+    color: white;
+    margin-top: 20px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .newsletterWrapperB {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 0vh;
+    }
+
+    .newsletterDescriptionB {
+        font-size: 1.1em;
+        margin-right: 5px;
+    }
+
+    .newsletterTitleB {
+        font-size: 1.8em;
+    }
+
+}

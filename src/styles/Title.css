@@ -1,0 +1,125 @@
+.firstContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5vh;
+    height: auto;
+    margin-left: 10%;
+}
+
+.titleSpace {
+    width: 45%;
+    box-sizing: border-box;
+}
+
+h1 .emoji {
+    color: white;
+}
+
+.newsSpace {
+    width: 40%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+h1 {
+    color: white;
+    font-size: 6.5em;
+    margin: 0;
+}
+.and {
+    display: inline;
+    font-size: 6em;
+}
+
+.showTitle {
+    display: inline;
+    background: -webkit-linear-gradient(left, #EE4CDB, #843bb8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.newsletterTitle {
+    display: inline;
+    background: -webkit-linear-gradient(left, #95cbfe, #236ef9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.descripcionNewsletter{
+    font-size: 1.8em;
+    margin-top: 1px;
+}
+
+.tituloNewsletter{
+    font-size: 2.8em;
+    font-weight: bold;
+    margin-top: 1px;
+}
+
+@media only screen and (max-width: 600px) {
+    .firstContainer {
+        height: auto;
+        width: 100%;
+        margin-top: 4vh;
+        margin-left: 5vw;
+        margin-bottom: 5vh;
+    }
+    .titleSpace {
+        width: 100%;
+        height: auto;
+    }
+    .newsSpace {
+        width: 90%;
+        height: auto;
+    }
+    h1{
+        font-size: 13vw;
+    }
+    .and{
+        font-size: 11vw;
+    }
+
+    .descripcionNewsletter{
+        font-size: 1.1em;
+    }
+    
+    .tituloNewsletter{
+        font-size: 1.2em;
+        margin-top: 30px;
+    }
+}
+
+
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
+    .firstContainer {
+        height: auto;
+        width: 100%;
+    }
+    .titleSpace {
+        width: 100%;
+        height: auto;
+    }
+    .newsSpace {
+        margin-top: 50px;
+        width: 80%;
+        height: auto;
+    }
+    h1{
+        font-size: 12vw;
+    }
+    .and{
+        font-size: 11vw;
+    }
+
+    .descripcionNewsletter{
+        font-size: 1.3em;
+    }
+    
+    .tituloNewsletter{
+        font-size: 1.8em;
+    }
+}

@@ -32,7 +32,7 @@ In order to speed up the deployment and testing of the app I've implemented a wo
 
 
 ## Usage
-To use GeniusKeys, simply access our [website](https://www.commandshow.lvrpiz.com).
+To check our page simply access our [website](https://www.commandshow.lvrpiz.com).
 
 ## Contact
 If you have any questions or comments about this project, feel free to contact me at email.

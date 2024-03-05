@@ -1,0 +1,63 @@
+.GhostcoreappleWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-top: 1vh;
+  margin-bottom: -4vh;
+}
+
+.textGCA {
+  font-size: 1.1em;
+}
+
+.GhostcoreappleButton {
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  height: 26px;
+  line-height: 26px;
+  width: 180px;
+  border: 2px solid #0000;
+  padding-bottom: 28px;
+  border-radius: 15px;
+  background: linear-gradient(#131219, #131219) padding-box,
+    linear-gradient(
+        var(--angle),
+        #361a38,
+        #580c64,
+        #e530fd,
+        #e530fd,
+        #cb4adc,
+        #f686e7,
+        #e39ffc,
+        #d281f0
+      )
+      border-box;
+  animation: 6s rotate linear infinite;
+  color: white;
+  font-size: 0.9em;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@media only screen and (max-width: 600px) {
+  .GhostcoreappleButton {
+    width: 160px;
+    margin-bottom: 25px;
+    margin-left: 15px;
+  }
+}
