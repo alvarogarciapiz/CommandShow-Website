@@ -12,7 +12,14 @@ const TarjetaEpisodio = ({ episode }) => {
             <img className="episodeImage" src={episode.artworkUrl600} alt={episode.trackName} />
             <div className="contentCard">
                 <p className="episodeDate">{new Date(episode.releaseDate).toLocaleDateString()}</p>
-                <h4 className="episodeTitle">{episode.trackName}</h4>
+                <h4 className="episodeTitle">
+                    <a href={episode.trackViewUrl} 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       style={{ textDecoration: 'none', color: 'inherit' }}>
+                        {episode.trackName}
+                    </a>
+                </h4>
                 <p className="episodeDescription">{description}</p>
                 <div className="enlaces">
                     <a href="https://www.youtube.com/@TheCommandShow" target="_blank" rel="noopener noreferrer">

@@ -10,7 +10,7 @@ const Twitter = () => {
     return (
         <div className="TwitterWrapperB">
             <h2 className="TwitterTitleB"><img src={logo} alt="GhostCoreTech logo" />Ghostcoreapple</h2>
-            <p className="TwitterDescriptionB">Noticias 📰, consejos, rumores y opinión sobre Apple , Tecnología, iPhone, iPad y Mac. <a  className="enlaceTWW" href="https://twitter.com/ghostcoreapple">@GhostcoreApple </a>es tu lugar para estar al día de la actualidad de Apple en español.</p>
+            <p className="TwitterDescriptionB">The Command Show y The Command Newsletter nacen de la mano de Ghostcoreapple, un medio de Noticias 📰, consejos, rumores y opinión sobre Apple , Tecnología, iPhone, iPad y Mac. <a  className="enlaceTWW" href="https://twitter.com/ghostcoreapple">@GhostcoreApple </a>es tu lugar para estar al día de la actualidad de Apple en español.</p>
 
             <div className="enlacesPodcast">
                 <div className="desktop desktopMedia">
