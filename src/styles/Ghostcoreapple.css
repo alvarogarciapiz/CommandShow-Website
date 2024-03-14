@@ -26,13 +26,12 @@
     linear-gradient(
         var(--angle),
         #361a38,
-        #580c64,
+        #7f198f,
         #e530fd,
         #e530fd,
         #cb4adc,
         #f686e7,
-        #e39ffc,
-        #d281f0
+        #c774e5
       )
       border-box;
   animation: 6s rotate linear infinite;

@@ -17,6 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Episodes />
     <Newsletter />
     <Twitter />
+    <SobreNosotros />
     <Footer />
   </React.StrictMode>,
 )
