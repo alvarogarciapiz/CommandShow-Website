@@ -27,7 +27,14 @@ const Episodes = () => {
         <div className="episodesWrapper">
             <h2 className="podcastTitle">The Command show</h2>
             <p className="podcastDescription">Tecnología, innovación, IA, Apple, iPhone y más
-                En este podcast, Álvaro y Samuel te traen las últimas tendencias tecnológicas más importantes del momento con un foco en Apple.</p>
+                En este podcast, Álvaro y Samuel te traen las últimas tendencias tecnológicas más importantes del momento con un foco en Apple.
+                 Puedes encontrarnos en todas las plataformas de audio como <a className='enlaceURL' href=''>Apple Podcasts</a>, 
+                 <a className='enlaceURL' href='https://open.spotify.com/show/2RgfLLM8bsFjHHhlkyEOJW?si=af1e628d90ca4f59'> Spotify</a>,
+                 <a className='enlaceURL' href='https://music.amazon.es/podcasts/d53f7123-d537-4e1c-94a6-7d44809dd289/the-command-show'> Amazon Music</a>, 
+                 <a className='enlaceURL' href='https://castbox.fm/channel/The-Command-Show-id5571515?country=es'> Castbox</a>,
+                 <a className='enlaceURL' href='https://play.pocketcasts.com/web/podcasts/share?id=78482f90-79a9-013c-74ef-027201e7e97f'> Pocket Casts</a>,
+                 <a className='enlaceURL' href='https://radiopublic.com/the-command-show-69MNm2'> Radio Public</a> y 
+                 <a className='enlaceURL' href='https://www.youtube.com/@TheCommandShow'> YouTube</a>.</p>
             <div className="enlacesPodcast">
                 <div className="desktop">
                     <a href="https://www.youtube.com/@TheCommandShow" target="_blank" rel="noopener noreferrer">

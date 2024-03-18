@@ -51,6 +51,12 @@
     display: none;
 }
 
+.enlaceURL {
+    text-decoration: none;
+    color: rgb(208, 96, 219);
+    font-weight: 600;
+}
+
 @media only screen and (max-width: 600px) {
     .episodesWrapper {
         width: 90%;
