@@ -1,0 +1,87 @@
+.interviewContent{
+    margin: 5% 8% 5% 8%;
+}
+
+.interviewTitle{
+    font-size: 5em;
+    font-weight: bold;
+}
+
+.interviewSubtitle{
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.interviewFinal{
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-top: 0px;
+}
+
+.interviewQuestion{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.interviewAnswer{
+    font-size: 1.5em;
+    margin-bottom: 6%;
+}
+
+.lineaInterview{
+    border: 0.5px solid #ffffff;
+    margin: 0% 0 4% 0;
+}
+
+.enlaceIVW{
+    color: rgb(208, 96, 219);
+    text-decoration: none;
+}
+
+.interviewDate{
+    font-size: 1em;
+    font-weight: 400;
+    margin-top: 4%;
+}
+
+@media only screen and (max-width: 600px) {
+    .interviewContent {
+      margin: 10% 5% 10% 5%;
+    }
+
+    .interviewTitle{
+        font-size: 2.5em;
+        font-weight: bold;
+    }
+    
+    .interviewSubtitle{
+        font-size: 1em;
+    }
+    
+    .interviewQuestion{
+        font-size: 1.4em;
+        font-weight: bold;
+    }
+    
+    .interviewAnswer{
+        font-size: 1.1em;
+        margin-bottom: 15%;
+    }
+    
+    .lineaInterview{
+        border: 0.5px solid #ffffff;
+        margin: 0% 0 4% 0;
+    }
+
+    .interviewDate{
+        font-size: 1em;
+        font-weight: 400;
+        margin-top: 10%;
+    }
+
+    .interviewFinal{
+        font-size: 1em;
+        font-weight: 400;
+        margin-top: 0px;
+    }
+  }
