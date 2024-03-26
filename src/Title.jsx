@@ -5,9 +5,9 @@ const Title = () => {
     return (
         <div className='firstContainer'>
             <div className='titleSpace'>
-                <h1>The <br></br> Command</h1>
-                <h1><span className="showTitle">show</span><span className="emoji">🎙️ &</span></h1>
-                <h1><span className='newsletterTitle'>newsletter </span><span className="emoji">📨</span></h1>
+                <h1>The <br></br> Command
+                <br></br><span className="showTitle">show</span><span className="emoji">🎙️ &</span>
+                <br></br><span className='newsletterTitle'>newsletter </span><span className="emoji">📨</span></h1>
             </div>
 
             <div className='newsSpace'>
