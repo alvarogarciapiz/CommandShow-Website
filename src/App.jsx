@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Home.jsx';
-import EntrevistaOnum from './EntrevistaOnum';
+import EntrevistaOnum from './EntrevistaOnum.jsx';
 
 function App() {
     return (
